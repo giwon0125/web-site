@@ -1,0 +1,149 @@
+/* Reset & 기본 스타일 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #bbb;
+    font-family: "Noto Sans KR", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 상단 네비게이션 */
+header {
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #333;
+}
+
+header .logo {
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 25px;
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+}
+
+/* 메인 섹션 */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 120px;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1e1e1e 100%);
+    text-align: center;
+}
+
+main h1 {
+    color: #bbb;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+main p.description {
+    color: #999;
+    font-size: 14px;
+    max-width: 400px;
+}
+
+/* 서비스 섹션 */
+section.services {
+    width: 100%;
+    max-width: 1100px;
+    margin: 70px auto 120px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.service-box {
+    background: linear-gradient(135deg, #3a3f4b, #2c3039);
+    border-radius: 12px;
+    padding: 30px 25px;
+    flex: 1;
+    max-width: 320px;
+    color: #bbb;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.service-box:hover {
+    background: linear-gradient(135deg, #505660, #3e4250);
+}
+
+.service-box h3 {
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.service-box p {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.3;
+}
+
+/* 섹션 제목 */
+section.services h2 {
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    padding: 30px 0;
+    background-color: #121212;
+    border-top: 1px solid #333;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+    section.services {
+        flex-direction: column;
+        max-width: 450px;
+        margin: 40px auto 80px;
+    }
+    .service-box {
+        max-width: 100%;
+    }
+    nav a {
+        margin-left: 15px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+}
